@@ -1,0 +1,12 @@
+// Funktion, um eine Linse hinzuzufügen
+function addLens() {
+    const newLens = new THREE.Mesh(
+        new THREE.CylinderGeometry(1, 1, 2, 32),
+        new THREE.MeshStandardMaterial({ color: 0xff0000 })
+    );
+    newLens.position.set(0, 3, 0);
+    scene.add(newLens);
+}
+
+// Event-Listener für Button
+document.getElementById('add-lens').addEventListener('click', addLens);
